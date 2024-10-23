@@ -1,12 +1,7 @@
 import db from "../../config/sqLite";
 import { SqlQuery } from "../enums/sqlQuery.enum";
+import { Task } from "../models/ITask";
 
-
-interface Task {
-    id?: number;
-    title: string;
-    description: string;
-}
 
 export const createTask = async (body: Task): Promise<Task> => {
     const { title, description } = body;
