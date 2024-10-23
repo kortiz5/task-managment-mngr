@@ -9,7 +9,6 @@ interface Task {
 }
 
 export const createTask = async (body: Task): Promise<Task> => {
-    console.log('createTask');
     const { title, description } = body;
     if (!title || !description) {
         throw new Error('Title and description are required');
