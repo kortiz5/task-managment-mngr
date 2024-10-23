@@ -92,6 +92,7 @@ export const deleteTask = async (req: Request, res: Response) => {
         }
         res.status(204).send();
     } catch (error) {
+        console.log('Error on deleteTask: ', error);
         res.status(500).json({ error: (error as Error).message });
     }
 };
